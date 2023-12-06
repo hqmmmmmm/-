@@ -4,3 +4,5 @@
 - 在异常处理方面：C语言中几乎没有异常处理机制，一般错误处理都是通过设置全局的errno来完成的；而C++引入了完整的异常处理机制，可以通过try/catch/throw来处理异常情况。
 
 - 还有一些小的细节点：比如C语言中不支持函数重载，结构体必须要加struct
+
+https://mp.weixin.qq.com/s/oGZnPbILPqfn90KexRS27Q
