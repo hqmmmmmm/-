@@ -1,14 +1,20 @@
 #include <iostream>
 #include <vector>
+#include <memory>
 
 using namespace std;
+
+class A
+{
+public:
+    int a, b;
+};
 
 
 
 int main()
 {
-    cout << to_string(112) << endl;
+    A a;
     
-
     return 0;
 }
