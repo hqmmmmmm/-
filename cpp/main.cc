@@ -15,13 +15,14 @@ public:
 
 int main()
 {
-    list<int> l;
+    list<int> l = {1, 2, 3, 4, 5, 6, 7, 8};
 
-    for(int i = 0; i < 10; ++i)
-        l.push_back(i);
+    for(auto it = l.begin(); it != l.end(); )
+    {
+        it = l.erase(it);
+    }
 
-    for(auto i : l)
-        cout << i << " ";
+    cout << l.size();
 
     cout << endl;
     return 0;
