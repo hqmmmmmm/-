@@ -1,4 +1,8 @@
-resize(n)    push_back    insert
+resize(n)  
+vector扩容至n，不是按倍数扩容
+
+
+push_back    insert
 改变vector的size，当n大于capacity时，vector会进行扩容（gcc2倍，MSVC1.5倍）
 
 
