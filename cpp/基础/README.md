@@ -1,0 +1,16 @@
+1. C++和C语言的区别？
+2. 编译链接过程？
+3. 装载运行过程？
+4. 大小端？
+5. const关键字：const与函数重载？const只读变量和常量？存放位置？
+6. const和define？
+7. static关键字？
+8. static初始化？
+9. define和typedef？
+10. volatile关键字？
+11. extern关键字？
+12. inline内联函数?
+13. 函数调用过程?
+14. 指针和引用的区别?
+15. strlen和sizeof区别?
+16. struct和class区别?
