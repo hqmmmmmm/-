@@ -13,4 +13,10 @@
 13. 函数调用过程?
 14. 指针和引用的区别?
 15. strlen和sizeof区别?
-16. struct和class区别?
+16. union？
+17. struct和class区别?
+18. C++RAII？
+19. 语言分类？
+20. 两种include？
+21. POD类型？
+22. 不同的换行符？
