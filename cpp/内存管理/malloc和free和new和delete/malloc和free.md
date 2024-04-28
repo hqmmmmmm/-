@@ -11,3 +11,14 @@ malloc函数用于动态内存分配，在申请内存时，一般会通过brk�
     3.采用双向链表管理所有空闲块。
     4.当申请一块内存时，遍历所有空闲块，根据相应的算法选择合适的空闲块。
     5.归还内存时，将内存块插入到空闲链表中，并尝试进行合并。
+
+
+---
+
+void *calloc(size_t nitems, size_t size); malloc 不会设置内存为零，而 calloc 会设置分配的内存为零。
+void *realloc(void *ptr, size_t size);    重新调整之前调用 malloc 或 calloc 所分配的 ptr 所指向的内存块的大小。
+
+---
+
+隐式链表：通过flag标记内存块是否被分配，通过size表示内存块大小。
+显式链表：通过prev和next指针域显式管理空闲块。
