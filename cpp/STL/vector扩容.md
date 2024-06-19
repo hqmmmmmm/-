@@ -8,3 +8,7 @@ push_back    insert
 
 reserve(n)   
 改变vector的capacity，当小于capacity时，什么也不发生；当n大于capacity时，会将capacity变大为n
+
+
+
+为什么扩容？

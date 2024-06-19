@@ -3,6 +3,7 @@
 #include <memory>
 #include <random>
 #include <list>
+#include <string>
 using namespace std;
 
 class A
@@ -32,7 +33,8 @@ void test_resize()
 int main()
 {
     //test_insert();
-    test_resize();
+    // test_resize();
+    cout << sizeof(string) << endl;
 
     return 0;
 }
