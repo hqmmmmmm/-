@@ -50,6 +50,10 @@ link_directories([AFTER|BEFORE] [SYSTEM] dir1 [dir2 ...])
 # 与前面的类似，只不过是添加库的搜索路径 
 target_link_directories(mylib [[PRIVATE | PUBLIC | INTERFACE]] <path>)
 
+
+find_package
+
+
 ```
 
 链接库设为可选  #cmakedefine, option, if条件判断

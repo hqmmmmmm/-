@@ -5,3 +5,4 @@ http和https的区别？
 - http工作的端口是80，https工作的端口是443。  
 - http协议不需要证书，而https协议需要使用CA机构颁发的SSL证书。
 - http是基于TCP的，https是基于TCP+SSL协议的。
+- 速度

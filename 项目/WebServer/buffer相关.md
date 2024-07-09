@@ -7,3 +7,7 @@ output buffer：当我们执行write操作后，可能操作系统一次性没�
 
 input buffer：当我们执行read操作后，读到的数据不一定是完整的，可以先将数据读到input buffer。
 
+
+
+
+如果读到的数据是不完整的进行解析的话会发生什么？

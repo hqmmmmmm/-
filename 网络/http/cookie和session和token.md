@@ -1,5 +1,0 @@
-cookie和的session的区别？
-
-1.cookie存放在客户端（浏览器）上，session存放在服务器上。session通常依赖cookie实现。
-
-当浏览器发送第一次请求给服务器时，服务器会产生成一个session和用来标识这个session的sessionID，session中保存了用户的信息，然后服务器通过设置cookie的方式将这个sessionID发给浏览器，浏览器下次向服务器发送请求时就会顺带发送这个cookie，浏览器接收到cookie后通过sessionID就能找到对应的session，就能识别用户了。
