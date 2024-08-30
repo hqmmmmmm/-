@@ -78,3 +78,10 @@ env
 
 
 [Linux学习之路基础篇](https://space.bilibili.com/1895975158/channel/collectiondetail?sid=222690&spm_id_from=333.788.0.0)
+
+
+
+## 进程控制
+```cpp
+tee   # 
+```
