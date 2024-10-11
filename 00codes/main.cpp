@@ -1,31 +1,61 @@
+#include <chrono>
 #include <iostream>
-#include <string>
+#include <vector>
+#include <thread>
+#include <condition_variable>
+using namespace std;
 
-using std::cin;
-using std::cout;
-using std::endl;
 
-struct student
+void print123()
 {
-    std::string name;
-    int age = 1;
-    char sex;
-};
+    condition_variable cv1, cv2, cv3;
+    mutex mtx;
+    int flag = 1;
+    
+    thread t1([&](){
+        while(1)
+        {
+            unique_lock<mutex> lock(mtx);
+            cv1.wait(lock, [&](){return flag == 1;});
+            cout << flag << endl;
+            flag = 2;
+            this_thread::sleep_for(chrono::seconds(1));
+            cv2.notify_all();
+        }
+    });
+    thread t2([&](){
+        while(1)
+        {
+            unique_lock<mutex> lock(mtx);
+            cv2.wait(lock, [&](){ return flag == 2; });
+            cout << flag << endl;
+            flag = 3;
+            this_thread::sleep_for(chrono::seconds(1));
+            cv3.notify_all();
+        }
+    });
+    thread t3([&](){
+        while(1)
+        {
+            unique_lock<mutex> lock(mtx);
+            cv3.wait(lock, [&](){return flag == 3;});
+            cout << flag << endl;
+            flag = 1;
+            this_thread::sleep_for(chrono::seconds(1));
+            cv1.notify_all();
+        }
+    });
 
-class A
+
+    t1.join();
+    t2.join();
+    t3.join();
+}
+
+int main()
 {
-private:
-    int a, b;
-public:
-    void fun() {}
-    // virtual void dosome() {}
-    // virtual void getsome() {}
-};
-
-int main() {
-    cout << sizeof(A) << endl;
-
+    print123();
+    
 
     return 0;
 }
-// 函数返回一个数组
