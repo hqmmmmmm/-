@@ -7,7 +7,7 @@ public: // 时间复杂度 O(nlogk)
     
     using PII = pair<int, int>;
     auto compare = [](PII p1, PII p2) { return p1.second > p2.second; };
-    priority_queue<PII, vector<PII>, decltype(compare)> heap;
+    priority_queue<PII, vector<PII>, decltype(compare)> heap; // 大根堆用小于号，小根堆用大于号
 
     for (auto &[key, value] : h) {
       if (heap.size() < k)

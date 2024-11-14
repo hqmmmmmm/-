@@ -1,0 +1,2 @@
+truncate删除表中的所有数据，但保留表结构；drop会删除整个表，包括表中的数据以及表结构。  
+truncate操作比drop操作慢，因为truncate需要保留表的结构。

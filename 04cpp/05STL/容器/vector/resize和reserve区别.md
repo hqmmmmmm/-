@@ -8,4 +8,4 @@ vector的capacity表示当前vector最多可以容纳多少个元素；size表�
 
 
 ### resize
-更改vector的size，如果resize的参数大于capacity，会引起内存重新分配。
+更改vector的size，如果resize的参数大于capacity，会引起内存重新分配，此时size=capacity。

@@ -92,17 +92,29 @@ tcpdump      数据包分析工具，抓包的
 
 
 
-## 查看系统状态
+## 系统管理
 
-top          实时查看系统运行情况，如CPU占用率，内存使用率等。
+top        实时查看系统运行情况，如CPU占用率，内存使用率等。
 
-ps           查看系统中所有进程的状态信息。
+ps         查看进程的详细信息。
+- ps aux   查看所有的进程。
 
-
-
-## 进程控制
+lsof       list open file查看进程打开的文件。
+- lsof -i         查看网络相关的文件
+- lsof -i:端口号   查看占用对应端口号的进程
 
 kill         向进程发送信号。
+
+du 查看文件和目录的磁盘使用情况
+df 显示文件系统的磁盘使用情况
+
+free 查看内存使用情况
+
+mount 挂载文件系统     
+- mount /dev/hda1 /mnt          将 /dev/hda1 挂在 /mnt 之下
+- mount -o ro /dev/hda1 /mnt    将 /dev/hda1 用唯读模式挂在 /mnt 之下
+
+
 
 
 [Linux学习之路基础篇](https://space.bilibili.com/1895975158/channel/collectiondetail?sid=222690&spm_id_from=333.788.0.0)
